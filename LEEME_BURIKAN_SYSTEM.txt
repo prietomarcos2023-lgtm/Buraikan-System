@@ -1,0 +1,34 @@
+BURIKAN — SHADOW TRADER SYSTEM
+================================
+
+Qué incluye esta actualización:
+- Estética HUD futurista: azul cian eléctrico, negro profundo, amarillo dorado para EXP y rango, rojo para pérdidas y alertas.
+- Panel superior de cazador, con nivel, rango, EXP, constancia mensual, racha y misión semanal.
+- Misión semanal: Backtesting sábado (revisión de trades y pares).
+- Integración del panel Hábitos Clase S existente y su revisión mensual.
+- Diseño adaptable a PC, tablets y teléfonos.
+
+Reglas de progresión:
+- Cada hábito registrado y programado: +20 EXP.
+- Backtesting sábado completado: +20 EXP del hábito +40 EXP adicionales, una sola vez por sábado.
+- Nivel 1 comienza en 0 EXP. Subir al nivel 2 exige 100 EXP; cada nivel siguiente requiere 25 EXP más que el anterior.
+- Rangos por EXP total: E 0, D 500, C 1300, B 2800, A 5000, S 8500, Shadow Monarch 13000.
+- Racha perfecta: número de días consecutivos con todas las tareas programadas completadas; el día presente aún incompleto no la rompe hasta el próximo día.
+- No se suman puntos por ganancias o pérdidas de trading; se mide la ejecución del proceso.
+
+Instalación en GitHub:
+1. Guardá primero un Backup JSON desde el dashboard actualmente publicado.
+2. Descomprimí este ZIP.
+3. Subí los archivos a la raíz de tu repositorio (Add file > Upload files > Commit changes), reemplazando los anteriores.
+4. Abrí el mismo dominio donde ya usabas el dashboard y recargá la página.
+
+Datos existentes:
+- No se modifican ni reinician las claves de localStorage de cuentas, trades ni hábitos.
+- El HUD calcula EXP a partir de los hábitos ya guardados. No genera registros ficticios.
+- El sistema de backups existente sigue incluyendo los hábitos.
+- No borres los datos del navegador ni cambies de dominio si dependés de localStorage.
+
+Verificación:
+- JavaScript validado con node --check.
+- Pruebas automatizadas de cálculo y registro de EXP, fechas y HUD satisfactorias.
+- No se pudo completar una verificación visual automática en Chromium en este entorno. Revisá la interfaz y los controles después del despliegue.
